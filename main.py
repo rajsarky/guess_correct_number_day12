@@ -1,4 +1,5 @@
 import random
+from art import logo
 
 IF_HIGH = "Too high."
 IF_LOW = "Too low."
@@ -15,6 +16,7 @@ def set_difficulty():
 
 def main():
     while True:
+        print(logo)
         lives = set_difficulty()  # Set lives based on difficulty
         CORRECT_GUESS = random.randint(1, 100)
 
