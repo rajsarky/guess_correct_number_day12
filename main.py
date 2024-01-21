@@ -7,6 +7,7 @@ IF_CORRECT = "You've got it!"
 
 
 def set_difficulty():
+    """returns the life depending on the difficulty level user choose"""
     while True:
         mode = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
         if mode in ["easy", "hard"]:
@@ -41,6 +42,7 @@ def main():
 
 
 def check_guess(user_guess, correct_guess, lives):
+    """checks the user_guess against correct_answer - (if correct return) reduce the life"""
     if user_guess > correct_guess:
         print(IF_HIGH)
     elif user_guess < correct_guess:
